@@ -1,0 +1,121 @@
+import React, { useState } from 'react'
+import Card from './Card'
+import './Ratings.css'
+import StarImg from "../images/icon-star.svg"
+
+function Ratings({rating, setRating, setShowThankYouPage}) {
+
+  const [ActiveRating, setActiveRating] = useState({
+    oneStar: false,
+    twoStars: false,
+    threeStars: false,
+    fourStars: false,
+    fiveStars: false,
+})
+
+  function handleSubmit() {
+    if (!rating) return
+
+    setShowThankYouPage(true)
+  }
+
+  return <Card>
+      <div className='star_img_container'>
+        <img src={StarImg} />
+      </div>
+
+      <h2 className='title'>How did we do?</h2>
+      <p className='text'>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <div className="rating">
+
+        <div
+          className={
+            ActiveRating.oneStar
+            ? "rating-container active"
+            : "rating-container"
+          }
+          onClick={() => {setActiveRating({
+            oneStar: true,
+            twoStars: false,
+            threeStars: false,
+            fourStars: false,
+            fiveStars: false,
+          });
+          setRating("1")
+        }}
+          >1</div>
+
+        <div
+        className={
+          ActiveRating.twoStars
+           ? "rating-container active"
+           : "rating-container"
+        }
+        onClick={() => {setActiveRating({
+          oneStar: false,
+          twoStars: true,
+          threeStars: false,
+          fourStars: false,
+          fiveStars: false,
+        });
+        setRating("2")
+      }}
+        >2</div>
+
+        <div
+        className={
+          ActiveRating.threeStars
+           ? "rating-container active"
+           : "rating-container"
+        }
+        onClick={() => {setActiveRating({
+          oneStar: false,
+          twoStars: false,
+          threeStars: true,
+          fourStars: false,
+          fiveStars: false,
+        });
+        setRating(3)
+      }}
+        >3</div>
+
+        <div
+        className={
+          ActiveRating.fourStars
+           ? "rating-container active"
+           : "rating-container"
+        }
+        onClick={() => {setActiveRating({
+          oneStar: false,
+          twoStars: false,
+          threeStars: false,
+          fourStars: true,
+          fiveStars: false,
+        });
+        setRating(4)
+      }}
+        >4</div>
+        <div
+
+        className={
+          ActiveRating.fiveStars
+           ? "rating-container active"
+           : "rating-container"
+        }
+        onClick={() => {setActiveRating({
+          oneStar: false,
+          twoStars: false,
+          threeStars: false,
+          fourStars: false,
+          fiveStars: true,
+        });
+        setRating(5)
+      }}
+        >5</div>
+      </div>
+
+      <button className="submit-btn" onClick={handleSubmit}>SUBMIT</button>
+    </Card>
+}
+
+export default Ratings

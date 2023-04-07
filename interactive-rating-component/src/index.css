@@ -7,7 +7,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  font-family: 'Overpass', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --primary-color-500: hsl(25, 97%, 53%);
+  --neutral-color-100: hsl(0, 0%, 100%);
+  --neutral-color-200: hsl(217, 12%, 63%);
+  --neutral-color-300: hsl(216, 12%, 54%);
+  --neutral-color-400: hsl(211, 19%, 24%);
+  --neutral-color-600: hsl(213, 19%, 18%);
+  --neutral-color-800: hsl(216, 12%, 8%);
+}
+
+#root {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--neutral-color-800);
 }

@@ -1,0 +1,72 @@
+.star_img_container {
+  background-color: var(--neutral-color-400);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--neutral-color-100);
+  margin: 2rem 0 1rem 0;
+  font-weight: 700;
+}
+
+.text {
+  color: var(--neutral-color-200);
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-size: 15px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.rating-container {
+  background-color: var(--neutral-color-400);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--neutral-color-200);
+}
+
+.rating-container.active {
+  background-color: var(--neutral-color-200);
+  color: var(--neutral-color-100);
+}
+
+.rating-container:hover {
+  background-color: var(--primary-color-500);
+  color: var(--neutral-color-100);
+}
+
+.submit-btn {
+  background-color: var(--primary-color-500);
+  color: var(--neutral-color-100);
+  width: 100%;
+  padding: 0.825rem;
+  border: none;
+  border-radius: 3rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--neutral-color-100);
+  color: var(--primary-color-500);
+}
+

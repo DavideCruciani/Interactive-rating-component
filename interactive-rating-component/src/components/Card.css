@@ -1,0 +1,13 @@
+.card {
+  background-color: var(--neutral-color-600);
+  width: 400px;
+  height: 400px;
+  border-radius: 1.25rem;
+  padding: 1.825rem;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 350px;
+  }
+}
